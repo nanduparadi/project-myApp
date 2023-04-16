@@ -1,0 +1,86 @@
+{
+  "productdata": [
+    {
+      "mobilebrand": "oppo",
+      "model": "21",
+      "os": "android",
+      "dop": "2023-03-06",
+      "dom": "2022-05-10",
+      "rd": "2023-01-07",
+      "ss": "21",
+      "ct": "2g",
+      "as": "Yes",
+      "ram": "16",
+      "rom": "128",
+      "bc": "3000",
+      "color": "Midnight Black",
+      "weight": 170,
+      "coo": "india",
+      "id": 1
+    },
+    {
+      "mobilebrand": "samsung",
+      "model": "s4",
+      "os": "lunix",
+      "dop": "2023-03-24",
+      "dom": "2023-03-13",
+      "rd": "2023-02-28",
+      "ss": "34",
+      "ct": "3g",
+      "as": "No",
+      "ram": "128",
+      "rom": "64",
+      "bc": "5000",
+      "color": "Aurora Green",
+      "weight": 300,
+      "coo": "england",
+      "id": 2
+    },
+    {
+      "mobilebrand": "realme",
+      "model": "r23",
+      "os": "windows",
+      "dop": "2023-03-07",
+      "dom": "2023-03-06",
+      "rd": "2023-03-29",
+      "ss": "45",
+      "ct": "4g",
+      "as": "Yes",
+      "ram": "8",
+      "rom": "16",
+      "bc": "8333",
+      "color": "Pale Pink",
+      "weight": 230,
+      "coo": "australia",
+      "id": 3
+    },
+    {
+      "mobilebrand": "oneplus",
+      "model": "o21",
+      "os": "lunix",
+      "dop": "2023-03-15",
+      "dom": "2023-03-14",
+      "rd": "2023-03-29",
+      "ss": "23",
+      "ct": "5g",
+      "as": "Yes",
+      "ram": "8",
+      "rom": "512",
+      "bc": "6000",
+      "color": "Navy Blue ",
+      "weight": 230,
+      "coo": "africa",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

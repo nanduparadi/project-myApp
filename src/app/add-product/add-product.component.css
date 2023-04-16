@@ -1,0 +1,80 @@
+.container{
+    width: 902px;
+}
+
+ .power{
+    color: #dc5757;
+    font-size: 17px;
+    top: auto
+}
+/* .form-control .ng-touched .ng-pristine .ng-invalid .ng-touched {
+    border: 1px solid red;
+} */
+.input-field.error{
+    border: 1px solid red;
+}
+.text-danger{
+    font-size: 12px;
+}
+
+h2{
+    color: #5e4e1c;
+    border-bottom: 1px solid #FFC000;
+    padding: 0 0 4px;
+}
+
+
+.card{
+    /* box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%); */
+    /* margin: 50px auto; */
+    padding: 20px;
+    border: none;
+    /* border: 1px solid rgb(186, 182, 182); */
+    
+    /* border: 1px solid #d5d5d5;
+    background: #eeeeee4f;    */
+    
+    /* background-color:#292a2b ; */
+
+    /* background-color: #393434 */
+
+}
+
+.row{
+    margin: 12px 0;
+}
+
+/* label,span{
+    color:#FFC000;
+} */
+input ,select{
+    border: none;
+    outline: none;
+    border: 1px solid #979595;  
+    border-color: rgb(61, 49, 0);   
+    /* box-shadow: rgb(61, 56, 0) 0px 0px 0px 1px inset; */
+
+}
+input:focus {
+    outline: none;
+  }
+label{
+    font-size: 13px;
+}
+.button-right {
+    margin-left: 630px;
+    margin-top: 20px;
+
+}
+
+i{
+    color: #4BB543 ;
+    margin-right: 7px;
+    font-size: 34px;
+}
+/* *************media screen******************* */
+@media all and (max-width: 802px){
+    .button-right {
+        margin-left: 277px
+    }
+}

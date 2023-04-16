@@ -1,0 +1,451 @@
+<div class="container">
+    <div>
+      <div class="row">
+        <h2>Add Product</h2>
+      </div>
+      <form [formGroup]="mobileProduct">
+        <ng-container *ngIf="!productData">
+
+          <div style="margin: auto">
+          
+            <div class="row">
+             <div class="form-group col-4 ">
+               <label for="mobilebrand" class="form-label">Mobile Brand <sup class="power">*</sup></label>
+               
+               <input
+                 type="text"                 
+                 class="form-control form-control-sm "                 
+                 formControlName="mobilebrand"                   
+               />
+               <div *ngIf="(mobileProduct.controls['mobilebrand'].touched || mobileProduct.controls['mobilebrand'].dirty )&&
+                mobileProduct.controls['mobilebrand'].invalid" class="text-danger"> 
+                <div *ngIf="mobileProduct.hasError('required','mobilebrand')">
+                 Mobile Brand field is required
+                </div> 
+               </div>
+               <!-- <div class="text-danger" 
+               *ngIf="!mobileProduct.controls['mobilebrand'].valid && 
+               mobileProduct.controls['mobilebrand'].touched "> <sup>*</sup> Mobile Brand field is required</div> -->
+             </div>
+
+             <div class="form-group col-4" >
+               <label for="model" class="form-label">Model<sup class="power">*</sup></label>
+               <input
+                type="text" 
+                class="form-control form-control-sm" 
+                formControlName="model"
+                 />
+                 <div *ngIf="(mobileProduct.controls['model'].touched || mobileProduct.controls['model'].dirty )&&
+                  mobileProduct.controls['model'].invalid" class="text-danger"> 
+                <div *ngIf="mobileProduct.hasError('required','model')" >
+                 Model field is required
+                </div> 
+               </div>
+
+             </div>
+             
+             <div class=
+             "form-group col-4" >
+               <label for="os" class="form-label">OS<sup class="power">*</sup></label>
+               <input type="text" class="form-control form-control-sm"  formControlName="os"
+               />
+               <div *ngIf="(mobileProduct.controls['os'].touched || mobileProduct.controls['os'].dirty )&&
+               mobileProduct.controls['os'].invalid" class="text-danger"> 
+             <div *ngIf="mobileProduct.hasError('required','os')">
+              OS fiels required
+             </div> 
+            </div>
+             </div>
+           </div>
+            
+           <div class="row">
+             <div class="form-group col-4">
+               <label for="dop" class="form-label">Date of Purchase<sup class="power">*</sup></label>
+               <input type="date" class="form-control form-control-sm" formControlName="dop" />
+               <div *ngIf="(mobileProduct.controls['dop'].touched || mobileProduct.controls['dop'].dirty )&&
+               mobileProduct.controls['dop'].invalid" class="text-danger"> 
+             <div *ngIf="mobileProduct.hasError('required','dop')">
+               Date of Purchase field is required
+             </div> 
+             </div>
+             </div>
+             <div class="form-group col-4" >
+               <label for="dom" class="form-label">Date of Manufacture<sup class="power">*</sup></label>
+               <input type="date" class="form-control form-control-sm"formControlName="dom"  />
+               <div *ngIf="(mobileProduct.controls['dom'].touched || mobileProduct.controls['dom'].dirty )&&
+               mobileProduct.controls['dom'].invalid" class="text-danger"> 
+             <div *ngIf="mobileProduct.hasError('required','dom')">
+               Date of Maufacture field is required
+             </div> 
+             </div>
+             </div>
+             <div class="form-group col-4" >
+               <label for="rd" class="form-label">Release Date<sup class="power">*</sup></label>
+               <input type="date" class="form-control form-control-sm"formControlName="rd" />
+               <div *ngIf="(mobileProduct.controls['rd'].touched || mobileProduct.controls['rd'].dirty )&&
+               mobileProduct.controls['rd'].invalid" class="text-danger"> 
+             <div *ngIf="mobileProduct.hasError('required','rd')">
+               Date of Purchase field is required
+             </div> 
+             </div>
+             </div>
+             
+           </div>
+             <div class="row">
+               <div class="form-group col-4" >
+                 <label for="screensize" class="form-label">Screen Size<sup class="power">*</sup></label>
+                 <input type="text" class="form-control form-control-sm" formControlName="ss"/>
+                 <div *ngIf="(mobileProduct.controls['ss'].touched || mobileProduct.controls['ss'].dirty )&&
+               mobileProduct.controls['ss'].invalid" class="text-danger"> 
+             <div *ngIf="mobileProduct.hasError('required','ss')">
+               Screen Size field is required
+             </div> 
+             </div>
+               </div>
+
+               <div class="select col-4">
+                 <label for="ct" class="form-label">Cellular Technology<sup class="power">*</sup></label>
+                 <select class="form-select form-select-sm " aria-label=".form-select-sm example" formControlName="ct">
+                   <option selected >--select--</option>
+                   <option value="2g">2G</option>
+                   <option value="3g">3G</option>
+                   <option value="4g">4G</option>
+                   <option value="5g">5G</option>
+                 </select>
+                 <div *ngIf="(mobileProduct.controls['ct'].touched || mobileProduct.controls['ct'].dirty )&&
+                 mobileProduct.controls['ct'].invalid" class="text-danger"> 
+               <div *ngIf="mobileProduct.hasError('required','ct')">
+                 Cellular Technology field is required
+               </div> 
+               </div>
+                 </div>
+
+                 <div class="form-group col-4" >
+                   <label for="as" class="form-label">Availability Stock<sup class="power">*</sup></label>&nbsp; <br>
+                   <input type="radio" name="rd_availability" value="Yes" name="as" formControlName="as"/> <span>Yes</span> &nbsp;&nbsp;
+                   <input type="radio" name="rd_availability" value="No" name="as" formControlName="as"/> <span>No</span>
+                   <div *ngIf="(mobileProduct.controls['as'].touched || mobileProduct.controls['as'].dirty )&&
+                   mobileProduct.controls['as'].invalid" class="text-danger"> 
+                 <div *ngIf="mobileProduct.hasError('required','as')">
+                   Availability Stock field is required
+                 </div> 
+                 </div>
+                 </div>
+               </div>
+           
+             <div class="row">
+               <div class="form-group col-4" >
+                 <label for="ram" class="form-label">RAM<sup class="power">*</sup></label>
+                 <input type="text"  class="form-control form-control-sm" formControlName="ram"/>
+                 <div *ngIf="(mobileProduct.controls['ram'].touched || mobileProduct.controls['ram'].dirty )&&
+                 mobileProduct.controls['ram'].invalid" class="text-danger"> 
+               <div *ngIf="mobileProduct.hasError('required','ram')">
+                 RAM field is required
+               </div> 
+               </div>
+
+               </div>
+               <div class="form-group col-4">
+                 <label for="rom" class="form-label">ROM<sup class="power">*</sup></label>
+                 <input type="text" name="rom" class ="form-control form-control-sm" formControlName="rom"/>
+                 <div *ngIf="(mobileProduct.controls['rom'].touched || mobileProduct.controls['rom'].dirty )&&
+                 mobileProduct.controls['rom'].invalid" class="text-danger"> 
+               <div *ngIf="mobileProduct.hasError('required','rom')">
+                 ROM field is required
+               </div> 
+               </div>
+               </div>
+               <div class="form-group col-4" >
+                 <label for="bc" class="form-label">Battery Capacity<sup class="power">*</sup></label>
+                 <input type="text" id="bc" class="form-control form-control-sm" formControlName="bc"/>
+                 <div *ngIf="(mobileProduct.controls['bc'].touched || mobileProduct.controls['bc'].dirty )&&
+                 mobileProduct.controls['bc'].invalid" class="text-danger"> 
+               <div *ngIf="mobileProduct.hasError('required','bc')">
+                 Battery Capacity field is required
+               </div> 
+               </div>
+
+               </div>
+             </div>
+
+             <div class="row">
+               <div class="select col-4">
+                 <label for="color" class="form-label">Color<sup class="power">*</sup></label>
+                 <select class="form-select form-select-sm " aria-label=".form-select-sm example" formControlName="color">
+                   <option selected>--select--</option>
+                   <option value="black">Black</option>
+                   <option value="Midnight Black">Midnight Black</option>
+                   <option value="Aurora Green">Aurora Green </option>
+                   <option value="Purple">Purple</option>
+                   <option value="Navy Blue ">Navy Blue</option>
+                   <option value="Pale Pink">Pale Pink</option>
+                 </select>
+                 <div *ngIf="(mobileProduct.controls['color'].touched || mobileProduct.controls['color'].dirty )&&
+                 mobileProduct.controls['color'].invalid" class="text-danger"> 
+               <div *ngIf="mobileProduct.hasError('required','color')">
+                 color field is required
+               </div> 
+               </div>
+               </div>
+               <div class="col-4">
+                 <label for="itemweight" class="form-label">Item Weight (grams)<sup class="power">*</sup></label>
+                 <input type="number" id="weight" class="form-control form-control-sm" formControlName="weight">
+                 <div *ngIf="(mobileProduct.controls['weight'].touched || mobileProduct.controls['weight'].dirty )&&
+                 mobileProduct.controls['weight'].invalid" class="text-danger"> 
+               <div *ngIf="mobileProduct.hasError('required','weight')">
+                 Item Weight field is required
+               </div> 
+               </div>
+               </div>
+               <div class="col-4">
+                 <label for="origin" class="form-label">Country of Origin<sup class="power">*</sup></label>
+                 <input type="text" id="coo" class="form-control form-control-sm" formControlName="coo">
+                 <div *ngIf="(mobileProduct.controls['coo'].touched || mobileProduct.controls['coo'].dirty )&&
+                 mobileProduct.controls['coo'].invalid" class="text-danger"> 
+               <div *ngIf="mobileProduct.hasError('required','coo')">
+                 Country of Origin field is required
+               </div> 
+               </div>
+
+               </div>
+             </div>
+               <div class="button-right">
+               <button type="button" class="btn btn-success"  (click)="onsubmit()">Save</button>  &nbsp;
+               <button type="button" class="btn btn-secondary">Cancel</button>
+               </div>
+       
+     </div>
+        </ng-container>
+        
+        <!-- *************updateproduct****************** -->
+
+        
+        <div *ngFor="let product of productData">
+          <ng-container *ngIf="productData">
+            <div style="margin: auto">
+            
+              <div class="row">
+               <div class="form-group col-4 ">
+                 <label for="mobilebrand" class="form-label">Mobile Brand <sup class="power">*</sup></label>
+                 
+                 <input
+                   type="text"                 
+                   class="form-control form-control-sm "                 
+                   formControlName="mobilebrand"                   
+                 />
+                 <div *ngIf="(mobileProduct.controls['mobilebrand'].touched || mobileProduct.controls['mobilebrand'].dirty )&&
+                  mobileProduct.controls['mobilebrand'].invalid" class="text-danger"> 
+                  <div *ngIf="mobileProduct.hasError('required','mobilebrand')">
+                   Mobile Brand field is required
+                  </div> 
+                 </div>
+                 <!-- <div class="text-danger" 
+                 *ngIf="!mobileProduct.controls['mobilebrand'].valid && 
+                 mobileProduct.controls['mobilebrand'].touched "> <sup>*</sup> Mobile Brand field is required</div> -->
+               </div>
+  
+               <div class="form-group col-4" >
+                 <label for="model" class="form-label">Model<sup class="power">*</sup></label>
+                 <input
+                  type="text" 
+                  class="form-control form-control-sm" 
+                  formControlName="model"
+                   />
+                   <div *ngIf="(mobileProduct.controls['model'].touched || mobileProduct.controls['model'].dirty )&&
+                    mobileProduct.controls['model'].invalid" class="text-danger"> 
+                  <div *ngIf="mobileProduct.hasError('required','model')">
+                   Model field is required
+                  </div> 
+                 </div>
+  
+               </div>
+               
+               <div class=
+               "form-group col-4" >
+                 <label for="os" class="form-label">OS<sup class="power">*</sup></label>
+                 <input type="text" class="form-control form-control-sm"  formControlName="os"
+                 />
+                 <div *ngIf="(mobileProduct.controls['os'].touched || mobileProduct.controls['os'].dirty )&&
+                 mobileProduct.controls['os'].invalid" class="text-danger"> 
+               <div *ngIf="mobileProduct.hasError('required','os')">
+                OS fiels required
+               </div> 
+              </div>
+               </div>
+             </div>
+              
+             <div class="row">
+               <div class="form-group col-4">
+                 <label for="dop" class="form-label">Date of Purchase<sup class="power">*</sup></label>
+                 <input type="date" class="form-control form-control-sm" formControlName="dop" />
+                 <div *ngIf="(mobileProduct.controls['dop'].touched || mobileProduct.controls['dop'].dirty )&&
+                 mobileProduct.controls['dop'].invalid" class="text-danger"> 
+               <div *ngIf="mobileProduct.hasError('required','dop')">
+                 Date of Purchase field is required
+               </div> 
+               </div>
+               </div>
+               <div class="form-group col-4" >
+                 <label for="dom" class="form-label">Date of Manufacture<sup class="power">*</sup></label>
+                 <input type="date" class="form-control form-control-sm"formControlName="dom"  />
+                 <div *ngIf="(mobileProduct.controls['dom'].touched || mobileProduct.controls['dom'].dirty )&&
+                 mobileProduct.controls['dom'].invalid" class="text-danger"> 
+               <div *ngIf="mobileProduct.hasError('required','dom')">
+                 Date of Maufacture field is required
+               </div> 
+               </div>
+               </div>
+               <div class="form-group col-4" >
+                 <label for="rd" class="form-label">Release Date<sup class="power">*</sup></label>
+                 <input type="date" class="form-control form-control-sm"formControlName="rd" />
+                 <div *ngIf="(mobileProduct.controls['rd'].touched || mobileProduct.controls['rd'].dirty )&&
+                 mobileProduct.controls['rd'].invalid" class="text-danger"> 
+               <div *ngIf="mobileProduct.hasError('required','rd')">
+                 Date of Purchase field is required
+               </div> 
+               </div>
+               </div>
+               
+             </div>
+               <div class="row">
+                 <div class="form-group col-4" >
+                   <label for="screensize" class="form-label">Screen Size<sup class="power">*</sup></label>
+                   <input type="text" class="form-control form-control-sm" formControlName="ss"/>
+                   <div *ngIf="(mobileProduct.controls['ss'].touched || mobileProduct.controls['ss'].dirty )&&
+                 mobileProduct.controls['ss'].invalid" class="text-danger"> 
+               <div *ngIf="mobileProduct.hasError('required','ss')">
+                 Screen Size field is required
+               </div> 
+               </div>
+                 </div>
+  
+                 <div class="select col-4">
+                   <label for="ct" class="form-label">Cellular Technology<sup class="power">*</sup></label>
+                   <select class="form-select form-select-sm " aria-label=".form-select-sm example" formControlName="ct">
+                     <option selected >--select--</option>
+                     <option value="2g">2G</option>
+                     <option value="3g">3G</option>
+                     <option value="4g">4G</option>
+                     <option value="5g">5G</option>
+                   </select>
+                   <div *ngIf="(mobileProduct.controls['ct'].touched || mobileProduct.controls['ct'].dirty )&&
+                   mobileProduct.controls['ct'].invalid" class="text-danger"> 
+                 <div *ngIf="mobileProduct.hasError('required','ct')">
+                   Cellular Technology field is required
+                 </div> 
+                 </div>
+                   </div>
+  
+                   <div class="form-group col-4" >
+                     <label for="as" class="form-label">Availability Stock<sup class="power">*</sup></label>&nbsp; <br>
+                     <input type="radio" name="rd_availability" value="Yes" name="as" formControlName="as"/> <span>Yes</span> &nbsp;&nbsp;
+                     <input type="radio" name="rd_availability" value="No" name="as" formControlName="as"/> <span>No</span>
+                     <div *ngIf="(mobileProduct.controls['as'].touched || mobileProduct.controls['as'].dirty )&&
+                     mobileProduct.controls['as'].invalid" class="text-danger"> 
+                   <div *ngIf="mobileProduct.hasError('required','as')">
+                     Availability Stock field is required
+                   </div> 
+                   </div>
+                   </div>
+                 </div>
+             
+               <div class="row">
+                 <div class="form-group col-4" >
+                   <label for="ram" class="form-label">RAM<sup class="power">*</sup></label>
+                   <input type="text"  class="form-control form-control-sm" formControlName="ram"/>
+                   <div *ngIf="(mobileProduct.controls['ram'].touched || mobileProduct.controls['ram'].dirty )&&
+                   mobileProduct.controls['ram'].invalid" class="text-danger"> 
+                 <div *ngIf="mobileProduct.hasError('required','ram')">
+                   RAM field is required
+                 </div> 
+                 </div>
+  
+                 </div>
+                 <div class="form-group col-4">
+                   <label for="rom" class="form-label">ROM<sup class="power">*</sup></label>
+                   <input type="text" name="rom" class ="form-control form-control-sm" formControlName="rom"/>
+                   <div *ngIf="(mobileProduct.controls['rom'].touched || mobileProduct.controls['rom'].dirty )&&
+                   mobileProduct.controls['rom'].invalid" class="text-danger"> 
+                 <div *ngIf="mobileProduct.hasError('required','rom')">
+                   ROM field is required
+                 </div> 
+                 </div>
+                 </div>
+                 <div class="form-group col-4" >
+                   <label for="bc" class="form-label">Battery Capacity<sup class="power">*</sup></label>
+                   <input type="text" id="bc" class="form-control form-control-sm" formControlName="bc"/>
+                   <div *ngIf="(mobileProduct.controls['bc'].touched || mobileProduct.controls['bc'].dirty )&&
+                   mobileProduct.controls['bc'].invalid" class="text-danger"> 
+                 <div *ngIf="mobileProduct.hasError('required','bc')">
+                   Battery Capacity field is required
+                 </div> 
+                 </div>
+  
+                 </div>
+               </div>
+  
+               <div class="row">
+                 <div class="select col-4">
+                   <label for="color" class="form-label">Color<sup class="power">*</sup></label>
+                   <select class="form-select form-select-sm " aria-label=".form-select-sm example" formControlName="color">
+                     <option selected>--select--</option>
+                     <option value="black">Black</option>
+                     <option value="Midnight Black">Midnight Black</option>
+                     <option value="Aurora Green">Aurora Green </option>
+                     <option value="Purple">Purple</option>
+                     <option value="Navy Blue ">Navy Blue</option>
+                     <option value="Pale Pink">Pale Pink</option>
+                   </select>
+                   <div *ngIf="(mobileProduct.controls['color'].touched || mobileProduct.controls['color'].dirty )&&
+                   mobileProduct.controls['color'].invalid" class="text-danger"> 
+                 <div *ngIf="mobileProduct.hasError('required','color')">
+                   color field is required
+                 </div> 
+                 </div>
+                 </div>
+                 <div class="col-4">
+                   <label for="itemweight" class="form-label">Item Weight (grams)<sup class="power">*</sup></label>
+                   <input type="number" id="weight" class="form-control form-control-sm" formControlName="weight">
+                   <div *ngIf="(mobileProduct.controls['weight'].touched || mobileProduct.controls['weight'].dirty )&&
+                   mobileProduct.controls['weight'].invalid" class="text-danger"> 
+                 <div *ngIf="mobileProduct.hasError('required','weight')">
+                   Item Weight field is required
+                 </div> 
+                 </div>
+                 </div>
+                 <div class="col-4">
+                   <label for="origin" class="form-label">Country of Origin<sup class="power">*</sup></label>
+                   <input type="text" id="coo" class="form-control form-control-sm" formControlName="coo">
+                   <div *ngIf="(mobileProduct.controls['coo'].touched || mobileProduct.controls['coo'].dirty )&&
+                   mobileProduct.controls['coo'].invalid" class="text-danger"> 
+                 <div *ngIf="mobileProduct.hasError('required','coo')">
+                   Country of Origin field is required
+                 </div> 
+                 </div>
+  
+                 </div>
+               </div>
+                 <div class="button-right">
+                 <button type="button" class="btn btn-success"  (click)="updateProductdata(product)">Update</button>  &nbsp;
+                 <button type="button" class="btn btn-secondary">Cancel</button>
+                 </div>
+         
+       </div>
+          </ng-container>
+        </div>
+      
+      </form>
+    </div>
+</div>
+ 
+  <div class="modal" [style]="modelstyle" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngIf="dialogBox">
+    <div class="modal-dialog" style="margin-top:72px ;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <i class="bi bi-check2-circle"></i>      
+          <h1 class="modal-title fs-5" id="exampleModalLabel" >Product Details Added Successfully</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-dismiss="modal" (click)="successMsg()"></button>
+        </div>
+      </div>
+    </div>
+  </div>
