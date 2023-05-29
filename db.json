@@ -71,6 +71,24 @@
       "weight": 230,
       "coo": "africa",
       "id": 4
+    },
+    {
+      "mobilebrand": "lenovo",
+      "model": "lne-12",
+      "os": "android",
+      "dop": "2023-05-17",
+      "dom": "2023-05-03",
+      "rd": "2023-05-04",
+      "ss": "12",
+      "ct": "5g",
+      "as": "Yes",
+      "ram": "8gb",
+      "rom": "128",
+      "bc": "4000",
+      "color": "Aurora Green",
+      "weight": 160,
+      "coo": "india",
+      "id": 5
     }
   ],
   "comments": [
